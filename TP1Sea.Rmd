@@ -1,0 +1,84 @@
+---
+title: "SeqTp1"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+Question 1: Le cancer du sein triple-négatif (appelé TNBC, pour Triple-Negative Breast Cancer en anglais), qui représente 10-15% de la totalité des cancers du sein, a un mauvais pronostic et est le plus complexe à maîtriser. La radiothérapie et la chimiothérapie sont actuellement les principaux traitements du TNBC, mais ne sont efficaces que chez certaines patientes.
+
+A l’heure actuelle, les connaissances sur le TNBC et l’identification de thérapies efficaces sont limitées par l’absence de modèles précliniques pertinents, capables de récapituler la complexité de ce cancer, notamment l’extraordinaire hétérogénéité entre tumeurs du même groupe et la résistance aux traitements. Il est donc crucial de mieux comprendre cette pathologie. 
+
+
+Question 2:
+
+ERBB2 (Erb-B2 Receptor Tyrosine Kinase 2) is a Protein Coding gene. Diseases associated with ERBB2 include Glioma Susceptibility 1 and Gastric Cancer. Among its related pathways are RET signaling and Development EGFR signaling via small GTPases. Gene Ontology (GO) annotations related to this gene include identical protein binding and protein kinase activity. An important paralog of this gene is EGFR.
+
+ PGR (Progesterone Receptor) is a Protein Coding gene. Diseases associated with PGR include Progesterone Resistance and Myoma. Among its related pathways are Signaling by GPCR and Relaxin signaling pathway. Gene Ontology (GO) annotations related to this gene include DNA-binding transcription factor activity and signaling receptor binding. An important paralog of this gene is NR3C2.
+
+ESR1 (Estrogen Receptor 1) is a Protein Coding gene. Diseases associated with ESR1 include Estrogen Resistance and Breast Cancer. Among its related pathways are Apoptosis and survival_Anti-apoptotic action of nuclear ESR1 and ESR2 and Lamotrigine Pathway, Pharmacokinetics and Pharmacodynamics. Gene Ontology (GO) annotations related to this gene include DNA-binding transcription factor activity and identical protein binding. An important paralog of this gene is ESR2.
+
+Question 3:
+
+```{R}
+Q3 <- function() {
+  message('Starting Q3')
+  mydata = read.delim("annot_sample.txt", sep = "\t")
+  print(mydata)
+  a <- table(mydata$condition)
+  print(a)
+  pie(a)
+  return(mydata)
+}
+
+a = Q3()
+````
+
+Question 5:
+Il y a une predominance de NonTNBC et TNBC et tres peu de NBS
+
+```{R}
+Q6 <- function() {
+  message('Starting Q6')
+  mydata2 = read.delim("counts.txt", sep = "\t")
+  annotgene = mydata2[,1:6]
+  comptage = mydata2[,7:26]
+  
+  seq_name = a[]
+  name <- a[,1]
+  
+  
+  
+  print(name)
+  colnames(comptage) <- a$sampleName #CAST
+  print(annotgene)
+  print(comptage)
+  
+  
+}
+
+Q6()
+````
